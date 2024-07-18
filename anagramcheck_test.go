@@ -8,13 +8,13 @@ func TestIsAnagram(t *testing.T) {
 		str2     string
 		expected bool
 	}{
-		{"listen", "silent", true},
-		{"triangle", "integral", true},
-		{"apple", "pale", false},
-		{"Apple", "pplae", true},
-		{"rat", "car", false},
-		{"hello", "billion", false},
-		{"Listen", "Silent", true},
+		{"listen", "silent", true},     // Basic anagram
+		{"triangle", "integral", true}, // Anagram with same length
+		{"apple", "pale", false},       // Different lengths
+		{"Apple", "pplae", true},       // Case insensitivity
+		{"rat", "car", false},          // Different characters
+		{"hello", "billion", false},    // Different lengths
+		{"Listen", "Silent", true},     // Case insensitivity
 	}
 
 	for _, test := range tests {
